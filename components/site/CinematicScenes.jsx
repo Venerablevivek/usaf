@@ -250,23 +250,32 @@ export default function CinematicScenes() {
       <div className="sticky top-0 h-screen w-full overflow-hidden" style={{ background: '#05060A' }}>
         {/* Video Layers */}
         {SCENES.map((s, i) => (
-          <div
-            key={s.id}
-            ref={(el) => (layerRefs.current[i] = el)}
-            className="absolute inset-0 w-full h-full"
-            style={{ opacity: i === 0 ? 1 : 0, zIndex: i === 0 ? 3 : 1, willChange: 'opacity' }}
-          >
-            <video
-              ref={(el) => (videoRefs.current[i] = el)}
-              muted
-              playsInline
-              preload="auto"
-              crossOrigin="anonymous"
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ filter: 'saturate(1.0) contrast(1.04) brightness(0.92)' }}
-            >
-              <source src={s.src} type="video/mp4" />
-            </video>
+                    <div
+                      key={s.id}
+                      ref={(el) => (layerRefs.current[i] = el)}
+                      className="absolute inset-0 w-full h-full"
+                      style={{
+                        opacity: i === 0 ? 1 : 0,
+                        zIndex: i === 0 ? 3 : 1,
+                        willChange: "opacity",
+                      }}
+                    >
+                      <video
+                        ref={(el) => (videoRefs.current[i] = el)}
+                        muted
+                        playsInline
+                        preload={i === 0 ? "auto" : "metadata"}
+                        crossOrigin="anonymous"
+                        className="absolute inset-0 w-full h-full object-cover"
+                        style={{
+                          filter: "saturate(1.0) contrast(1.04) brightness(0.92)",
+                          willChange: "transform, opacity",
+                          transform: "translateZ(0)",
+                          backfaceVisibility: "hidden",
+                        }}
+                      >
+                        <source src={s.src} type="video/mp4" />
+                      </video>
 
             {/* Clean cinematic overlays */}
             <div className="absolute inset-0 pointer-events-none" style={{
@@ -333,7 +342,7 @@ export default function CinematicScenes() {
         >
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
             <a
-              href="#"
+              href="https://us-federation-demo-nexivra-ai.vercel.app/"
               className="group relative inline-flex items-center gap-3 px-12 py-5 rounded-full font-sans font-semibold tracking-[0.3em] text-xs uppercase overflow-hidden"
               style={{ background: '#FFFFFF', color: '#0A0A0A' }}
             >

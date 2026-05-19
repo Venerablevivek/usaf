@@ -66,7 +66,7 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#cinematic"
+          href="https://us-federation-demo-nexivra-ai.vercel.app/"
           className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-all group"
           style={{
             border: `1px solid ${overDark ? 'rgba(255,255,255,0.3)' : 'rgba(10,10,10,0.18)'}`,
