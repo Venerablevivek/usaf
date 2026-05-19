@@ -4,6 +4,14 @@ import dynamic from 'next/dynamic';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SceneAtmosphere from './SceneAtmosphere';
+const SceneOne = "/videos/scene1.mp4";
+const SceneTwo = "/videos/scene2.mp4";
+const SceneThree = "/videos/scene3.mp4";
+const SceneFour = "/videos/scene4.mp4";
+const SceneFive = "/videos/scene5.mp4";
+const SceneSix = "/videos/scene6.mp4";
+const SceneSeven = "/videos/scene7.mp4";
+const SceneEight = "/videos/scene8.mp4";
 
 // R3F canvas only mounted client-side, lazy
 const SceneCanvas = dynamic(() => import('./R3F/SceneCanvas'), { ssr: false });
@@ -13,56 +21,56 @@ const SCENES = [
     id: 1, chapter: 'I', kicker: 'The Awakening Sky',
     title: 'THE SKY IS NOT THE LIMIT',
     sub: ['Human flight began with imagination.', 'Now it becomes a global movement.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/n6f5ibaw_Scene1.mp4',
+    src: SceneOne,
     range: [0.00, 0.12], accent: '#0085C7', r3f: 'clouds',
   },
   {
     id: 2, chapter: 'II', kicker: 'The Rise of Flight',
     title: 'BORN TO DEFY GRAVITY',
     sub: ['Air sports redefine human potential.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/z6mkek59_Scene2.mp4',
+    src: SceneTwo,
     range: [0.12, 0.24], accent: '#F4C300',
   },
   {
     id: 3, chapter: 'III', kicker: 'The Momentum',
     title: 'SPEED \u2022 DISCIPLINE \u2022 FREEDOM',
     sub: ['Precision meets courage in the sky.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/v2010ldh_Scene3.mp4',
+    src: SceneThree,
     range: [0.24, 0.36], accent: '#009F3D',
   },
   {
     id: 4, chapter: 'IV', kicker: 'The Atmosphere',
     title: 'WHERE HUMAN FLIGHT EVOLVES',
     sub: ['Innovation beyond the clouds.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/jtz89kfq_Scene4.mp4',
+    src: SceneFour,
     range: [0.36, 0.48], accent: '#DF0024', r3f: 'bloom',
   },
   {
     id: 5, chapter: 'V', kicker: 'The Global Unity',
     title: 'ONE FEDERATION \u2022 ONE SKY',
     sub: ['Uniting nations through flight.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/bny36a04_scene%205.mp4',
+    src: SceneFive,
     range: [0.48, 0.60], accent: '#FFFFFF',
   },
   {
     id: 6, chapter: 'VI', kicker: 'The Elite World',
     title: 'THE MOST EXTREME AIR SPORTS',
     sub: ['Where elite athletes challenge gravity.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/ct89mzig_scene6.mp4',
+    src: SceneSix,
     range: [0.60, 0.72], accent: '#F4C300',
   },
   {
     id: 7, chapter: 'VII', kicker: 'The Future of Aviation',
     title: 'THE NEXT ERA OF HUMAN FLIGHT',
     sub: ['The future of aerial performance.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/8u2ldzp8_scene7.mp4',
+    src: SceneSeven,
     range: [0.72, 0.86], accent: '#0085C7',
   },
   {
     id: 8, chapter: 'VIII', kicker: 'Final Cinematic Hold',
     title: 'UNITED STATES AIR SPORTS FEDERATION',
     sub: ['Uniting the future of global air sports.'],
-    src: 'https://customer-assets.emergentagent.com/job_apex-ascent-1/artifacts/2g9ln7su_scene%208.mp4',
+    src: SceneEight,
     range: [0.86, 1.00], accent: '#FFFFFF', r3f: 'rings', cta: true,
   },
 ];
